@@ -265,6 +265,9 @@
         function changeLanguage() {
             var language = document.getElementById("language-select").value;
             var newUrl = "https://wallaalerts.com/walla_alerts_" + language + ".html";
+            if (language == "es") {
+                newUrl = "https://wallaalerts.com"
+            }
             window.location.href = newUrl;
         }
     </script>
