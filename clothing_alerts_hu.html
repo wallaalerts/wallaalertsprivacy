@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Alerts - Értesítések a Vintedhez</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon_hu.ico">
+    <link rel="stylesheet" href="styles_ca.css">
+</head>
+<body>
+    
+    <div class="language-selector">
+        <div class="container">
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="ca">Català</option>
+                <option value="da">Dansk</option>
+                <option value="de">Deutsch</option>
+                <option value="el">Ελληνικά</option>
+                <option value="es">Español</option>
+                <option value="fi">Suomi</option>
+                <option value="fr">Français</option>
+                <option value="hr">Hrvatski</option>
+                <option value="hu" selected>Magyar</option>
+                <option value="it">Italiano</option>
+                <option value="nl">Nederlands</option>
+                <option value="pl">Polski</option>
+                <option value="pt">Português</option>
+                <option value="ro">Română</option>
+                <option value="se">Svenska</option>
+            </select>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <img src="images/logo_ca.png" alt="Clothing Alerts logo" class="logo">
+            <h1>Clothing Alerts</h1>
+            <p style="font-size: 20px;">Azonnali értesítések a Vintedhez</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="description">
+            <h2>Találja meg a legjobb ruházati ajánlatokat azonnal!</h2>
+            <p>A Clothing Alerts a tökéletes alkalmazás az ajánlatvadászoknak a Vinteden.<br>Kapjon azonnali értesítéseket az új hirdetésekről, amelyek megfelelnek keresésének.<br>Nem kell egész nap ébernek lennie, az alkalmazás ezt automatikusan megteszi ön helyett!</p>
+            <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank">
+                <img id="google-badge" alt="Szerezze be a Google Playről" src="https://play.google.com/intl/hu/badges/static/images/badges/hu_badge_web_generic.png" />
+            </a>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <img src="images/ic_bell.svg" alt="Értesítés ikon">
+                <h3>Azonnali Értesítések</h3>
+                <p>Kapjon értesítéseket valós időben, amikor új hirdetések jelennek meg.</p>
+            </div>
+            <div class="feature">
+                <img src="images/ic_search.svg" alt="Keresés ikon">
+                <h3>Testreszabott Keresések</h3>
+                <p>Hozza létre és mentse el kedvenc kereséseit, hogy ne maradjon le egyetlen jó ajánlatról sem.</p>
+            </div>
+            <div class="feature">
+                <img src="images/ic_money.svg" alt="Ajánlat ikon">
+                <h3>Találja Meg Az Ajánlatokat</h3>
+                <p>Legyen az első, aki felfedezi a legjobb használt ruházati ajánlatokat.</p>
+            </div>
+        </section>
+
+        <section class="screenshots">
+            <div class="screenshot">
+                <img src="images/s_ca_1.jpg" alt="Képernyőkép 1">
+            </div>
+            <div class="screenshot">
+                <img src="images/s_ca_2.jpg" alt="Képernyőkép 2">
+            </div>
+            <div class="screenshot">
+                <img src="images/s_ca_3.jpg" alt="Képernyőkép 3">
+            </div>
+            <div class="screenshot">
+                <img src="images/s_ca_4.jpg" alt="Képernyőkép 4">
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; RSTU</p>
+            <a href="privacy_policy.html"><p>Adatvédelmi Irányelvek</p></a>
+            <a href="mailto:clothing.alerts.app@gmail.com" class="cta-button cta-button2">Lépjen Kapcsolatba Velünk</a>
+        </div>
+    </footer>
+
+    <script>
+        function changeLanguage() {
+            var language = document.getElementById("language-select").value;
+            var newUrl = "https://wallaalerts.com/clothing_alerts_" + language + ".html";
+            window.location.href = newUrl;
+        }
+    </script>
+</body>
+</html>

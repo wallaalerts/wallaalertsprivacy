@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data collection and security</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .language-selector {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .language-content {
+            display: none;
+        }
+        .language-content.active {
+            display: block;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function showContent(language) {
+            const contents = document.querySelectorAll('.language-content');
+            contents.forEach(content => content.classList.remove('active'));
+            document.getElementById(language).classList.add('active');
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            showContent('spanish'); // Default language
+        });
+    </script>
+</head>
+<body>
+    <h1>Data collection and security</h1>
+
+    <div class="language-selector">
+        <button onclick="showContent('spanish')">Español</button>
+        <button onclick="showContent('catalan')">Català</button>
+        <button onclick="showContent('english')">English</button>
+        <button onclick="showContent('italian')">Italiano</button>
+        <button onclick="showContent('portuguese')">Português</button>
+    </div>
+
+    <div id="spanish" class="language-content active">
+        <h2>Recolección y seguridad de datos</h2>
+        <p>La aplicación almacena el correo electrónico y la contraseña (encriptada) de cada usuario. Para eliminar la cuenta, pueden enviar un correo electrónico a <a href="mailto:walla.alerts.app@gmail.com?subject=Delete%20account">walla.alerts.app@gmail.com</a> con el asunto "Eliminar cuenta" para eliminar toda la información almacenada de la cuenta o eliminar la cuenta en la aplicación (Configuración > Eliminar cuenta).</p>
+        <p>Enlace para eliminar la cuenta: <a href="mailto:walla.alerts.app@gmail.com?subject=Delete%20account">Eliminar cuenta</a></p>
+    </div>
+
+    <div id="catalan" class="language-content">
+        <h2>Recollida i seguretat de dades</h2>
+        <p>L'aplicació emmagatzema el correu electrònic i la contrasenya (encriptada) de cada usuari. Per eliminar el compte, poden enviar un correu electrònic a <a href="mailto:walla.alerts.app@gmail.com?subject=Delete%20account">walla.alerts.app@gmail.com</a> amb l'assumpte "Eliminar compte" per eliminar tota la informació emmagatzemada del compte o eliminar el compte en l'aplicació (Configuració > Eliminar compte).</p>
+        <p>Enllaç per eliminar el compte: <a href="mailto:walla.alerts.app@gmail.com?subject=Delete%20account">Eliminar compte</a></p>
+    </div>
+
+    <div id="english" class="language-content">
+        <h2>Data collection and security</h2>
+        <p>The app stores the email and password (encrypted) for each user. To delete the account, they can send an email to <a href="mailto:walla.alerts.app@gmail.com?subject=Delete%20account">walla.alerts.app@gmail.com</a> with the subject "Delete account" to delete all the information stored from the account or delete the account on the app (Settings > Delete account).</p>
+        <p>Link to delete the account: <a href="mailto:walla.alerts.app@gmail.com?subject=Delete%20account">Delete account</a></p>
+    </div>
+
+    <div id="italian" class="language-content">
+        <h2>Raccolta e sicurezza dei dati</h2>
+        <p>L'app memorizza l'email e la password (crittografata) per ogni utente. Per eliminare l'account, possono inviare un'email a <a href="mailto:walla.alerts.app@gmail.com?subject=Delete%20account">walla.alerts.app@gmail.com</a> con l'oggetto "Elimina account" per eliminare tutte le informazioni memorizzate dall'account o eliminare l'account sull'app (Impostazioni > Elimina account).</p>
+        <p>Link per eliminare l'account: <a href="mailto:walla.alerts.app@gmail.com?subject=Delete%20account">Elimina account</a></p>
+    </div>
+
+    <div id="portuguese" class="language-content">
+        <h2>Coleta e segurança de dados</h2>
+        <p>O aplicativo armazena o email e a senha (criptografada) de cada usuário. Para excluir a conta, podem enviar um email para <a href="mailto:walla.alerts.app@gmail.com?subject=Delete%20account">walla.alerts.app@gmail.com</a> com o assunto "Excluir conta" para excluir todas as informações armazenadas da conta ou excluir a conta no aplicativo (Configurações > Excluir conta).</p>
+        <p>Link para excluir a conta: <a href="mailto:walla.alerts.app@gmail.com?subject=Delete%20account">Excluir conta</a></p>
+    </div>
+</body>
+</html>

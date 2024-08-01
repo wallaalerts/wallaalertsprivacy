@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url('fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; /* Range of available weights */
+    font-style: normal;
+}
+
+a {
+    color: inherit; /* Inherit color from parent element */
+    text-decoration: none; /* Remove underline */
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #bcdbf6; /* Page background */
+    color: #2a2a2a; /* Main text color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #0070b1; /* Header background color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 20px 0;
+}
+
+.description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#google-badge {
+    height: 100px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #1576AE; /* Button background color */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #125a8a; /* Button color on hover */
+}
+
+.cta-button2:hover {
+    background-color: #0f3c57; /* Button background color on hover */
+}
+
+.features, .other-apps {
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.other-apps-container {
+    display: flex;
+    flex-wrap: wrap;
+    color: #444;
+}
+
+.features {
+    display: flex;
+}
+
+.feature, .app {
+    flex-basis: 30%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.feature img, .app img {
+    width: 64px;
+    height: 64px;
+}
+
+.app {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    flex: 1 1 calc(50% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.app h3 {
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #015f95; /* Footer background color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.language-selector {
+    background-color: #015f95; /* Language selector background color */
+    text-align: right;
+    padding: 10px;
+}
+
+.language-selector select {
+    background-color: #0f3c57; /* Language selector background color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.language-selector option {
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    background-position: 6px center;
+    background-size: 20px auto;
+}
+
+.flag-icon {
+    margin-right: 5px;
+}
+
+/* Styles for the screenshots section */
+.screenshots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.screenshot {
+    flex: 1 1 calc(25% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.screenshot img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}

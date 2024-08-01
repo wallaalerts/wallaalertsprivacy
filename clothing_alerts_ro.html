@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Alerts - Notificări pentru Vinted</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon_ro.ico">
+    <link rel="stylesheet" href="styles_ca.css">
+</head>
+<body>
+    
+    <div class="language-selector">
+        <div class="container">
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="ca">Català</option>
+                <option value="da">Dansk</option>
+                <option value="de">Deutsch</option>
+                <option value="el">Ελληνικά</option>
+                <option value="es">Español</option>
+                <option value="fi">Suomi</option>
+                <option value="fr">Français</option>
+                <option value="hr">Hrvatski</option>
+                <option value="hu">Magyar</option>
+                <option value="it">Italiano</option>
+                <option value="nl">Nederlands</option>
+                <option value="pl">Polski</option>
+                <option value="pt">Português</option>
+                <option value="ro" selected>Română</option>
+                <option value="se">Svenska</option>
+            </select>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <img src="images/logo_ca.png" alt="Logo Clothing Alerts" class="logo">
+            <h1>Clothing Alerts</h1>
+            <p style="font-size: 20px;">Notificări Imediate pentru Vinted</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="description">
+            <h2>Găsește Imediat Cele Mai Bune Ofertă de Îmbrăcăminte!</h2>
+            <p>Clothing Alerts este aplicația ideală pentru vânătorii de oferte pe Vinted.<br>Primește notificări imediate despre anunțurile noi care se potrivesc căutărilor tale.<br>Nu trebuie să stai tot timpul cu ochii pe aplicație, aceasta face totul automat pentru tine!</p>
+            <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank">
+                <img id="google-badge" alt="Descarcă de pe Google Play" src="https://play.google.com/intl/ro/badges/static/images/badges/ro_badge_web_generic.png" />
+            </a>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <img src="images/ic_bell.svg" alt="Icon Notificare">
+                <h3>Notificări Imediate</h3>
+                <p>Primește notificări în timp real când apar anunțuri noi.</p>
+            </div>
+            <div class="feature">
+                <img src="images/ic_search.svg" alt="Icon Căutare">
+                <h3>Căutări Personalizate</h3>
+                <p>Creează și salvează căutările tale favorite pentru a nu pierde nicio ofertă.</p>
+            </div>
+            <div class="feature">
+                <img src="images/ic_money.svg" alt="Icon Ofertă">
+                <h3>Găsește Oferte</h3>
+                <p>Fii primul care descoperă cele mai bune oferte de haine second-hand.</p>
+            </div>
+        </section>
+
+        <section class="screenshots">
+            <div class="screenshot">
+                <img src="images/s_ca_1.jpg" alt="Captură de Ecran 1">
+            </div>
+            <div class="screenshot">
+                <img src="images/s_ca_2.jpg" alt="Captură de Ecran 2">
+            </div>
+            <div class="screenshot">
+                <img src="images/s_ca_3.jpg" alt="Captură de Ecran 3">
+            </div>
+            <div class="screenshot">
+                <img src="images/s_ca_4.jpg" alt="Captură de Ecran 4">
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; RSTU</p>
+            <a href="privacy_policy.html"><p>Politica de Confidențialitate</p></a>
+            <a href="mailto:clothing.alerts.app@gmail.com" class="cta-button cta-button2">Contactează-ne</a>
+        </div>
+    </footer>
+
+    <script>
+        function changeLanguage() {
+            var language = document.getElementById("language-select").value;
+            var newUrl = "https://wallaalerts.com/clothing_alerts_" + language + ".html";
+            window.location.href = newUrl;
+        }
+    </script>
+</body>
+</html>

@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Walla Alerts - Alertas para Wallapop</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon_wa.ico">
+    <title>Regalos Segunda Mano - Encuentra productos gratis en Wallapop</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon_rsm.ico">
     <style>
         @font-face {
             font-family: 'Rubik';
             src: url('fonts/Rubik-VariableFont_wght.ttf') format('truetype');
-            font-weight: 100 900; /* Range of weights available */
+            font-weight: 100 900;
             font-style: normal;
         }
         a {
-            color: inherit; /* Inherit color from parent element */
-            text-decoration: none; /* Remove underline */
+            color: inherit;
+            text-decoration: none;
         }
         body {
             font-family: 'Rubik', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e3d6ff;
-            color: #40335e;
+            background-color: #bce0dc;
+            color: #333333;
         }
         .container {
             max-width: 1200px;
@@ -29,7 +29,7 @@
             padding: 20px;
         }
         header {
-            background-color: #57457F;
+            background-color: #11908a;
             color: white;
             text-align: center;
         }
@@ -52,7 +52,7 @@
         }
         .cta-button {
             display: inline-block;
-            background-color: #6a6a6a;
+            background-color: #34b8a7;
             color: white;
             padding: 15px 30px;
             text-decoration: none;
@@ -61,10 +61,10 @@
             transition: background-color 0.3s;
         }
         .cta-button:hover {
-            background-color: #57457F;
+            background-color: #319795;
         }
         .cta-button2:hover {
-            background-color: #2d2441;
+            background-color: #2c7a7b;
         }
         .features, .other-apps {
             justify-content: space-around;
@@ -100,7 +100,7 @@
             margin-top: 10px;
         }
         footer {
-            background-color: #57457F;
+            background-color: #11908a;
             color: white;
             text-align: center;
             padding: 20px 0;
@@ -110,28 +110,6 @@
             color: white;
             text-decoration: none;
         }
-        .language-selector {
-            background-color: #40335e;
-            text-align: right;
-        }
-        .language-selector select {
-            background-color: #57457F;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            font-size: 14px;
-            border-radius: 5px;
-        }
-        .language-selector option {
-            padding-left: 30px;
-            background-repeat: no-repeat;
-            background-position: 6px center;
-            background-size: 20px auto;
-        }
-        .flag-icon {
-            margin-right: 5px;
-        }
-        /* New styles for screenshots section */
         .screenshots {
             display: flex;
             flex-wrap: wrap;
@@ -151,43 +129,19 @@
     </style>
 </head>
 <body>
-    
-    <div class="language-selector">
-        <div class="container">
-            <select id="language-select" onchange="changeLanguage()">
-                <option value="en">English</option>
-                <option value="ca">Català</option>
-                <option value="da">Dansk</option>
-                <option value="de">Deutsch</option>
-                <option value="el">Ελληνικά</option>
-                <option value="es" selected>Español</option>
-                <option value="fi">Suomi</option>
-                <option value="fr">Français</option>
-                <option value="hr">Hrvatski</option>
-                <option value="hu">Magyar</option>
-                <option value="it">Italiano</option>
-                <option value="nl">Nederlands</option>
-                <option value="pl">Polski</option>
-                <option value="pt">Português</option>
-                <option value="ro">Română</option>
-                <option value="se">Svenska</option>
-            </select>
-        </div>
-    </div>
-
     <header>
         <div class="container">
-            <img src="images/logo_wa.png" alt="Logo de Walla Alerts" class="logo">
-            <h1>Walla Alerts</h1>
-            <p style="font-size: 20px;">Alertas instantáneas para Wallapop</p>
+            <img src="images/logo_rsm.png" alt="Logo de Regalos Segunda Mano" class="logo">
+            <h1>Regalos Segunda Mano</h1>
+            <p style="font-size: 20px;">Encuentra productos gratis en Wallapop</p>
         </div>
     </header>
 
     <main class="container">
         <section class="description">
-            <h2>¡Descubre las mejores ofertas al instante!</h2>
-            <p>Walla Alerts es la aplicación definitiva para los amantes de Wallapop.<br>Recibe notificaciones inmediatas de los nuevos anuncios que coincidan con tus búsquedas personalizadas.<br>Ya no tendrás que estar pendiente constantemente de la app, ¡nosotros lo hacemos por ti!</p>
-            <a href="https://play.google.com/store/apps/details?id=rstu.wallaalerts" target="_blank">
+            <h2>¡Descubre productos gratis cerca de ti!</h2>
+            <p>Regalos Segunda Mano es la aplicación definitiva para encontrar productos gratis en Wallapop.<br>Recibe notificaciones instantáneas de nuevos anuncios gratuitos en tu zona.<br>¡Ya no tendrás que estar pendiente constantemente de la app, nosotros lo hacemos por ti!</p>
+            <a href="https://play.google.com/store/apps/details?id=rstu.cosasgratis_alerts" target="_blank">
                 <img id="google-badge" alt="Consíguelo en Google Play" src="https://play.google.com/intl/es/badges/static/images/badges/es_badge_web_generic.png" />
             </a>
         </section>
@@ -196,7 +150,7 @@
             <div class="feature">
                 <img src="images/ic_bell.svg" alt="Icono de alerta">
                 <h3>Alertas Instantáneas</h3>
-                <p>Recibe notificaciones en tiempo real cuando aparezcan nuevos anuncios.</p>
+                <p>Recibe notificaciones en tiempo real cuando aparezcan nuevos anuncios gratuitos.</p>
             </div>
             <div class="feature">
                 <img src="images/ic_search.svg" alt="Icono de búsqueda">
@@ -204,25 +158,24 @@
                 <p>Crea y guarda tus búsquedas favoritas para no perderte ninguna oportunidad.</p>
             </div>
             <div class="feature">
-                <img src="images/ic_money.svg" alt="Icono de ofertas">
-                <h3>Encuentra Chollos</h3>
-                <p>Sé el primero en descubrir las mejores ofertas en artículos de segunda mano.</p>
+                <img src="images/ic_gift.svg" alt="Icono de regalo">
+                <h3>Encuentra Regalos</h3>
+                <p>Descubre muebles, electrodomésticos, objetos antiguos y más, ¡totalmente gratis!</p>
             </div>
         </section>
 
-        <!-- New Screenshots Section -->
         <section class="screenshots">
             <div class="screenshot">
-                <img src="images/s_wa_1.jpg" alt="Screenshot 1">
+                <img src="images/s_rsm_1.jpg" alt="Screenshot 1">
             </div>
             <div class="screenshot">
-                <img src="images/s_wa_2.jpg" alt="Screenshot 2">
+                <img src="images/s_rsm_2.jpg" alt="Screenshot 2">
             </div>
             <div class="screenshot">
-                <img src="images/s_wa_3.jpg" alt="Screenshot 3">
+                <img src="images/s_rsm_3.jpg" alt="Screenshot 3">
             </div>
             <div class="screenshot">
-                <img src="images/s_wa_4.jpg" alt="Screenshot 4">
+                <img src="images/s_rsm_4.jpg" alt="Screenshot 4">
             </div>
         </section>
 
@@ -230,12 +183,12 @@
             <h2>Otras aplicaciones que te pueden interesar</h2>
             <div class="other-apps-container">
                 <div class="app">
-                    <a href="regalos_segunda_mano.html">
-                        <img src="images/logo_rsm.png" alt="Icono de Regalos Segunda Mano">
-                        <h3>Regalos Segunda Mano</h3>
-                        <p>Encuentra productos gratis en Wallapop en tu área.</p>
+                    <a href="index.html">
+                        <img src="images/logo_wa.png" alt="Icono de Walla Alerts">
+                        <h3>Walla Alerts</h3>
+                        <p>Recibe alertas instantáneas de nuevos anuncios en Wallapop.</p>
                     </a>
-                    <a href="https://play.google.com/store/apps/details?id=rstu.cosasgratis_alerts" target="_blank" class="cta-button">Descargar</a>
+                    <a href="https://play.google.com/store/apps/details?id=rstu.wallaalerts" target="_blank" class="cta-button">Descargar</a>
                 </div>
                 <div class="app">
                     <a href="clothing_alerts_es.html">
@@ -269,16 +222,8 @@
         <div class="container">
             <p>&copy; RSTU</p>
             <a href="privacy_policy.html"><p>Política de privacidad</p></a>
-            <a href="mailto:walla.alerts.app@gmail.com" class="cta-button cta-button2">Contacto</a>
+            <a href="mailto:regalos.segunda.mano.app@gmail.com" class="cta-button cta-button2">Contacto</a>
         </div>
     </footer>
-
-    <script>
-        function changeLanguage() {
-            var language = document.getElementById("language-select").value;
-            var newUrl = "https://wallaalerts.com/walla_alerts_" + language + ".html";
-            window.location.href = newUrl;
-        }
-    </script>
 </body>
 </html>
