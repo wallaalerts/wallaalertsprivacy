@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pisos de Bancos - Alertas de Inmuebles Bancarios</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon_pb.ico">
+    <style>
+        @font-face {
+            font-family: 'Rubik';
+            src: url('fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+            font-weight: 100 900;
+            font-style: normal;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        body {
+            font-family: 'Rubik', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d2e8ff;
+            color: #333c5e;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #1c2d4f;
+            color: white;
+            text-align: center;
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 20px 0;
+        }
+        .description {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #google-badge {
+            height: 100px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #6a6a6a;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #384f68;
+        }
+        .cta-button2:hover {
+            background-color: rgb(32, 27, 43);
+        }
+        .features, .other-apps {
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .other-apps-container {
+            display: flex;
+            flex-wrap: wrap;
+            color: #444;
+        }
+        .features {
+            display: flex;
+        }
+        .feature, .app {
+            flex-basis: 30%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .feature img, .app img {
+            width: 64px;
+            height: 64px;
+        }
+        .app {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            flex: 1 1 calc(50% - 20px);
+            margin: 10px;
+            box-sizing: border-box;
+        }
+        .app h3 {
+            margin-top: 10px;
+        }
+        .app .logo-other-app {
+            height: 140px;
+            width: 140px;
+        }
+        footer {
+            background-color: #384f68;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        .language-selector {
+            background-color: #1d4471;
+            text-align: right;
+        }
+        .language-selector select {
+            background-color: #263545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+        .language-selector option {
+            padding-left: 30px;
+            background-repeat: no-repeat;
+            background-position: 6px center;
+            background-size: 20px auto;
+        }
+        .flag-icon {
+            margin-right: 5px;
+        }
+        .screenshots {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+        .screenshot {
+            flex: 1 1 calc(50% - 20px);
+            margin: 10px;
+            box-sizing: border-box;
+        }
+        .screenshot img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="language-selector">
+        <div class="container">
+            <!-- <select id="language-select" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="ca">Català</option>
+                <option value="es" selected>Español</option>
+                <option value="it">Italiano</option>
+                <option value="pt">Português</option>
+            </select> -->
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <img src="images/logo_pb.png" alt="Logo de Pisos de Bancos" class="logo">
+            <h1>Pisos de Bancos</h1>
+            <p style="font-size: 20px;">Alertas para Inmuebles Bancarios</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="description">
+            <h2>¡Encuentra propiedades bancarias al instante!</h2>
+            <p>Pisos de Bancos es la aplicación ideal para quienes buscan oportunidades en propiedades inmobiliarias de bancos.<br>Recibe alertas inmediatas de nuevos inmuebles de los portales inmobiliarios de bancos más importantes:</p>
+            <strong>Haya</strong></br>
+            <strong>Aliseda</strong></br>
+            <strong>Altamira</strong></br>
+            <strong>Servihabitat</strong></br>
+            <strong>Solvia</strong></br>
+            <p>Nosotros rastreamos los anuncios por ti, ¡solo espera las notificaciones!</p>
+
+            <a href="https://play.google.com/store/apps/details?id=rstu.pisos_de_bancos" target="_blank">
+                <img id="google-badge" alt="Consíguelo en Google Play" src="https://play.google.com/intl/es/badges/static/images/badges/es_badge_web_generic.png" />
+            </a>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <img src="images/ic_bell.svg" alt="Icono de alerta">
+                <h3>Alertas Inmediatas</h3>
+                <p>Recibe notificaciones en tiempo real cuando se publiquen nuevas propiedades.</p>
+            </div>
+            <div class="feature">
+                <img src="images/ic_search.svg" alt="Icono de búsqueda">
+                <h3>Búsquedas Personalizadas</h3>
+                <p>Crea filtros para recibir solo los inmuebles que te interesan.</p>
+            </div>
+            <div class="feature">
+                <img src="images/ic_house.svg" alt="Icono de propiedades">
+                <h3>Propiedades Bancarias</h3>
+                <p>Accede a las mejores ofertas en casas, pisos y terrenos de los principales portales de inmuebles de bancos.</p>
+            </div>
+        </section>
+
+        <section class="screenshots">
+            <div class="screenshot">
+                <img src="images/s_pb_1.jpg" alt="Screenshot 1">
+            </div>
+            <div class="screenshot">
+                <img src="images/s_pb_2.jpg" alt="Screenshot 2">
+            </div>
+            <div class="screenshot">
+                <img src="images/s_pb_3.jpg" alt="Screenshot 3">
+            </div>
+            <div class="screenshot">
+                <img src="images/s_pb_4.jpg" alt="Screenshot 4">
+            </div>
+        </section>
+
+        <section class="other-apps">
+            <h2>Otras aplicaciones que te pueden interesar</h2>
+            <div class="other-apps-container">
+                <div class="app">
+                    <a href="regalos_segunda_mano.html">
+                        <img class="logo-other-app" src="images/logo_rsm.png" alt="Icono de Regalos Segunda Mano">
+                        <h3>Regalos Segunda Mano</h3>
+                        <p>Encuentra productos gratis en Wallapop en tu área.</p>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=rstu.cosasgratis_alerts" target="_blank" class="cta-button">Descargar</a>
+                </div>
+                <div class="app">
+                    <a href="index.html">
+                        <img class="logo-other-app" src="images/logo_wa.png" alt="Icono de Walla Alerts">
+                        <h3>Walla Alerts</h3>
+                        <p>Alertas instantáneas de anuncios de Wallapop.</p>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=rstu.wallaalerts" target="_blank" class="cta-button">Descargar</a>
+                </div>
+                <div class="app">
+                    <a href="clothing_alerts_es.html">
+                        <img class="logo-other-app" src="images/logo_ca.png" alt="Icono de Clothing Alerts">
+                        <h3>Clothing Alerts</h3>
+                        <p>Alertas instantáneas para ofertas de ropa en Vinted.</p>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank" class="cta-button">Descargar</a>
+                </div>
+                <div class="app">
+                    <a href="tc_alerts.html">
+                        <img class="logo-other-app" src="images/logo_tc.png" alt="Icono de tc alerts">
+                        <h3>tc alerts</h3>
+                        <p>Alertas para todocoleccion: ideal para coleccionistas.</p>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=rstu.tc_alerts" target="_blank" class="cta-button">Descargar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; RSTU</p>
+            <a href="privacy_pisosdebancos.html"><p>Política de privacidad</p></a>
+            <a href="mailto:pisosdebancos.app@gmail.com" class="cta-button cta-button2">Contacto</a>
+        </div>
+    </footer>
+
+    <!-- <script>
+        function changeLanguage() {
+            var language = document.getElementById("language-select").value;
+            var newUrl = "https://wallaalerts.com/pisos_bancos_" + language + ".html";
+            window.location.href = newUrl;
+        }
+    </script> -->
+</body>
+</html>
