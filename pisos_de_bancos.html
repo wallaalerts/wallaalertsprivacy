@@ -145,11 +145,60 @@
             flex: 1 1 calc(50% - 20px);
             margin: 10px;
             box-sizing: border-box;
+            cursor: pointer;
         }
         .screenshot img {
             width: 100%;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* New styles for the carousel */
+        .carousel-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+        }
+        .carousel-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .carousel-image {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+        }
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2em;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+        }
+        .carousel-nav.prev {
+            left: 10px;
+        }
+        .carousel-nav.next {
+            right: 10px;
+        }
+        .carousel-close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 2em;
+            color: white;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -210,25 +259,36 @@
         </section>
 
         <section class="screenshots">
-            <div class="screenshot">
+            <div class="screenshot" onclick="openCarousel(0)">
                 <img src="images/s_pb_1.jpg" alt="Screenshot 1">
             </div>
-            <div class="screenshot">
+            <div class="screenshot" onclick="openCarousel(1)">
                 <img src="images/s_pb_2.jpg" alt="Screenshot 2">
             </div>
-            <div class="screenshot">
+            <div class="screenshot" onclick="openCarousel(2)">
                 <img src="images/s_pb_3.jpg" alt="Screenshot 3">
             </div>
-            <div class="screenshot">
+            <div class="screenshot" onclick="openCarousel(3)">
                 <img src="images/s_pb_4.jpg" alt="Screenshot 4">
             </div>
-            <div class="screenshot">
+            <div class="screenshot" onclick="openCarousel(4)">
                 <img src="images/s_pb_5.jpg" alt="Screenshot 5">
             </div>
-            <div class="screenshot">
+            <div class="screenshot" onclick="openCarousel(5)">
                 <img src="images/s_pb_6.jpg" alt="Screenshot 6">
             </div>
         </section>
+
+
+        <!-- Carousel Overlay -->
+        <div class="carousel-overlay" id="carouselOverlay">
+            <div class="carousel-container">
+                <img src="" alt="Carousel Image" class="carousel-image" id="carouselImage">
+                <div class="carousel-nav prev" onclick="changeImage(-1)">&#10094;</div>
+                <div class="carousel-nav next" onclick="changeImage(1)">&#10095;</div>
+                <div class="carousel-close" onclick="closeCarousel()">&#10005;</div>
+            </div>
+        </div>
 
 
         <section class="description">
@@ -284,6 +344,55 @@
         </div>
     </footer>
 
+    <script>
+        const images = [
+            "images/s_pb_1.jpg",
+            "images/s_pb_2.jpg",
+            "images/s_pb_3.jpg",
+            "images/s_pb_4.jpg",
+            "images/s_pb_5.jpg",
+            "images/s_pb_6.jpg"
+        ];
+        let currentIndex = 0;
+
+        function openCarousel(index) {
+            currentIndex = index;
+            document.getElementById('carouselImage').src = images[currentIndex];
+            document.getElementById('carouselOverlay').style.display = 'block';
+        }
+
+        function closeCarousel() {
+            document.getElementById('carouselOverlay').style.display = 'none';
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            if (currentIndex >= images.length) currentIndex = 0;
+            document.getElementById('carouselImage').src = images[currentIndex];
+        }
+
+        // Touch events for swiping
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.getElementById('carouselOverlay').addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.getElementById('carouselOverlay').addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchStartX - touchEndX > 50) {
+                changeImage(1); // Swipe left, next image
+            } else if (touchEndX - touchStartX > 50) {
+                changeImage(-1); // Swipe right, previous image
+            }
+        }
+    </script>
     <!-- <script>
         function changeLanguage() {
             var language = document.getElementById("language-select").value;
