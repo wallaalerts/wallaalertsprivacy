@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Alerts - Notifiche per Vinted</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon_it.ico">
+    <link rel="stylesheet" href="styles_ca.css">
+</head>
+<body>
+    
+    <div class="language-selector">
+        <div class="container">
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="ca">Català</option>
+                <option value="da">Dansk</option>
+                <option value="de">Deutsch</option>
+                <option value="el">Ελληνικά</option>
+                <option value="es">Español</option>
+                <option value="fi">Suomi</option>
+                <option value="fr">Français</option>
+                <option value="hr">Hrvatski</option>
+                <option value="hu">Magyar</option>
+                <option value="it" selected>Italiano</option>
+                <option value="nl">Nederlands</option>
+                <option value="pl">Polski</option>
+                <option value="pt">Português</option>
+                <option value="ro">Română</option>
+                <option value="se">Svenska</option>
+            </select>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <img src="images/logo_ca.png" alt="Clothing Alerts logo" class="logo">
+            <h1>Clothing Alerts</h1>
+            <p style="font-size: 20px;">Notifiche Immediate per Vinted</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="description">
+            <h2>Trova Subito le Migliori Offerte di Abbigliamento!</h2>
+            <p>Clothing Alerts è l'app perfetta per chi cerca offerte su Vinted.<br>Ricevi notifiche immediate sui nuovi annunci che corrispondono alle tue ricerche.<br>Non devi più stare allerta tutto il giorno, l'app lo fa automaticamente per te!</p>
+            <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank">
+                <img id="google-badge" alt="Ottieni su Google Play" src="https://play.google.com/intl/it/badges/static/images/badges/it_badge_web_generic.png" />
+            </a>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <img src="images/ic_bell.svg" alt="Icona Notifica">
+                <h3>Notifiche Immediate</h3>
+                <p>Ricevi notifiche in tempo reale quando vengono pubblicati nuovi annunci.</p>
+            </div>
+            <div class="feature">
+                <img src="images/ic_search.svg" alt="Icona Ricerca">
+                <h3>Ricerche Personalizzate</h3>
+                <p>Crea e salva le tue ricerche preferite per non perdere nessuna offerta.</p>
+            </div>
+            <div class="feature">
+                <img src="images/ic_money.svg" alt="Icona Offerta">
+                <h3>Trova Offerte</h3>
+                <p>Sii il primo a scoprire le migliori offerte su abbigliamento usato.</p>
+            </div>
+        </section>
+
+        <section class="screenshots">
+            <div class="screenshot">
+                <img src="images/s_ca_1.jpg" alt="Screenshot 1">
+            </div>
+            <div class="screenshot">
+                <img src="images/s_ca_2.jpg" alt="Screenshot 2">
+            </div>
+            <div class="screenshot">
+                <img src="images/s_ca_3.jpg" alt="Screenshot 3">
+            </div>
+            <div class="screenshot">
+                <img src="images/s_ca_4.jpg" alt="Screenshot 4">
+            </div>
+        </section>
+
+        <section class="other-apps">
+            <h2>Altre App</h2>
+            <a href="https://play.google.com/store/apps/details?id=rstu.walla_alerts" target="_blank">
+                <img id="google-badge" alt="Walla Alerts su Google Play" src="https://play.google.com/intl/it/badges/static/images/badges/it_badge_web_generic.png" />
+                <p>Walla Alerts</p>
+            </a>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; RSTU</p>
+            <a href="privacy_policy.html"><p>Informativa sulla Privacy</p></a>
+            <a href="mailto:clothing.alerts.app@gmail.com" class="cta-button cta-button2">Contattaci</a>
+        </div>
+    </footer>
+
+    <script>
+        function changeLanguage() {
+            var language = document.getElementById("language-select").value;
+            var newUrl = "https://wallaalerts.com/clothing_alerts_" + language + ".html";
+            window.location.href = newUrl;
+        }
+    </script>
+</body>
+</html>
