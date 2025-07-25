@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Datos y Eliminación de Cuenta - Regalos Segunda Mano</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #0056b3;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #0056b3;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 25px;
+        }
+        .language-selector {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .language-selector button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .language-selector button:hover {
+            background-color: #0056b3;
+        }
+        .language-content {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .language-content.active {
+            display: block;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #d9534f; /* A color to draw attention to deletion info */
+        }
+        .contact-info {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #eaf6ff;
+            border-left: 5px solid #007BFF;
+        }
+    </style>
+    <script>
+        function showContent(language) {
+            const contents = document.querySelectorAll('.language-content');
+            contents.forEach(content => content.classList.remove('active'));
+            document.getElementById(language).classList.add('active');
+            localStorage.setItem('preferredLanguage', language); // Store preferred language
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const storedLanguage = localStorage.getItem('preferredLanguage');
+            if (storedLanguage) {
+                showContent(storedLanguage);
+            } else {
+                showContent('spanish'); // Default language
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Política de Datos y Eliminación de Cuenta para Regalos Segunda Mano</h1>
+
+    <div class="language-selector">
+        <button onclick="showContent('spanish')">Español</button>
+        <button onclick="showContent('catalan')">Català</button>
+        <button onclick="showContent('english')">English</button>
+        <button onclick="showContent('italian')">Italiano</button>
+        <button onclick="showContent('portuguese')">Português</button>
+    </div>
+
+    <div id="spanish" class="language-content active">
+        <h2>Recopilación y Seguridad de Datos en Regalos Segunda Mano</h2>
+        <p>En <strong>Regalos Segunda Mano</strong>, nos comprometemos a proteger su privacidad. Nuestra aplicación utiliza el sistema de autenticación de Firebase para gestionar las cuentas de usuario. Esto significa que cuando usted se registra, almacenamos de forma segura su dirección de correo electrónico y un identificador de usuario único. Las contraseñas se gestionan directamente por Firebase y se almacenan de forma encriptada, sin que tengamos acceso directo a ellas.</p>
+
+        <h2>Solicitud de Eliminación de Cuenta y Datos Personales</h2>
+        <p>Entendemos que usted tiene derecho a controlar sus datos. Si desea eliminar su cuenta de <strong>Regalos Segunda Mano</strong> y todos los datos asociados que almacenamos, tiene dos opciones:</p>
+        <ol>
+            <li>
+                <p><strong>Desde la Aplicación:</strong> Puede iniciar el proceso de eliminación directamente desde la aplicación <strong>Regalos Segunda Mano</strong> navegando a <span class="highlight">Configuración > Eliminar Cuenta</span>. Siga las instrucciones que aparecen en pantalla.</p>
+            </li>
+            <li>
+                <p><strong>Mediante Correo Electrónico:</strong> Si prefiere solicitar la eliminación de su cuenta por correo electrónico, envíe un mensaje a nuestra dirección de soporte.</p>
+                <p class="contact-info">
+                    Para eliminar su cuenta y todos los datos asociados, envíe un correo electrónico a: <br>
+                    <a href="mailto:walla.alerts.app@gmail.com?subject=Solicitud%20de%20Eliminaci%C3%B3n%20de%20Cuenta%20Regalos%20Segunda%20Mano">
+                        <span class="highlight">walla.alerts.app@gmail.com</span>
+                    </a><br>
+                    Por favor, use el asunto: <span class="highlight">"Solicitud de Eliminación de Cuenta Regalos Segunda Mano"</span>
+                </p>
+                <p>En su correo, incluya la dirección de correo electrónico asociada a su cuenta de <strong>Regalos Segunda Mano</strong> para que podamos procesar su solicitud de manera eficiente. Nos comprometemos a eliminar todos sus datos almacenados tan pronto como sea posible tras verificar su identidad.</p>
+            </li>
+        </ol>
+
+        <h2>Acceso a Sus Datos Personales</h2>
+        <p>Si desea consultar qué datos tenemos almacenados sobre usted o solicitar una copia de los mismos, por favor, póngase en contacto con nosotros a través del mismo correo electrónico: <a href="mailto:walla.alerts.app@gmail.com?subject=Consulta%20de%20Datos%20Regalos%20Segunda%20Mano">walla.alerts.app@gmail.com</a>, indicando en el asunto "Consulta de Datos Regalos Segunda Mano".</p>
+    </div>
+
+    <div id="catalan" class="language-content">
+        <h2>Recollida i Seguretat de Dades a Regalos Segunda Mano</h2>
+        <p>A <strong>Regalos Segunda Mano</strong>, ens comprometem a protegir la vostra privadesa. La nostra aplicació utilitza el sistema d'autenticació de Firebase per gestionar els comptes d'usuari. Això vol dir que quan us registreu, emmagatzemem de forma segura la vostra adreça de correu electrònic i un identificador d'usuari únic. Les contrasenyes es gestionen directament per Firebase i s'emmagatzemen de forma encriptada, sense que tinguem accés directe a elles.</p>
+
+        <h2>Sol·licitud d'Eliminació de Compte i Dades Personals</h2>
+        <p>Entenem que teniu dret a controlar les vostres dades. Si desitgeu eliminar el vostre compte de <strong>Regalos Segunda Mano</strong> i totes les dades associades que emmagatzemem, teniu dues opcions:</p>
+        <ol>
+            <li>
+                <p><strong>Des de l'Aplicació:</strong> Podeu iniciar el procés d'eliminació directament des de l'aplicació <strong>Regalos Segunda Mano</strong> navegant a <span class="highlight">Configuració > Eliminar Compte</span>. Seguiu les instruccions que apareixen en pantalla.</p>
+            </li>
+            <li>
+                <p><strong>Mitjançant Correu Electrònic:</strong> Si preferiu sol·licitar l'eliminació del vostre compte per correu electrònic, envieu un missatge a la nostra adreça de suport.</p>
+                <p class="contact-info">
+                    Per eliminar el vostre compte i totes les dades associades, envieu un correu electrònic a: <br>
+                    <a href="mailto:walla.alerts.app@gmail.com?subject=Sol·licitud%20d'Eliminaci%C3%B3%20de%20Compte%20Regalos%20Segunda%20Mano">
+                        <span class="highlight">walla.alerts.app@gmail.com</span>
+                    </a><br>
+                    Si us plau, utilitzeu l'assumpte: <span class="highlight">"Sol·licitud d'Eliminació de Compte Regalos Segunda Mano"</span>
+                </p>
+                <p>Al vostre correu, incloeu l'adreça de correu electrònic associada al vostre compte de <strong>Regalos Segunda Mano</strong> perquè puguem processar la vostra sol·licitud de manera eficient. Ens comprometem a eliminar totes les vostres dades emmagatzemades tan aviat com sigui possible després de verificar la vostra identitat.</p>
+            </li>
+        </ol>
+
+        <h2>Accés a Les Vostres Dades Personals</h2>
+        <p>Si desitgeu consultar quines dades tenim emmagatzemades sobre vosaltres o sol·licitar una còpia de les mateixes, si us plau, poseu-vos en contacte amb nosaltres a través del mateix correu electrònic: <a href="mailto:walla.alerts.app@gmail.com?subject=Consulta%20de%20Dades%20Regalos%20Segunda%20Mano">walla.alerts.app@gmail.com</a>, indicant a l'assumpte "Consulta de Dades Regalos Segunda Mano".</p>
+    </div>
+
+    <div id="english" class="language-content">
+        <h2>Data Collection and Security for Regalos Segunda Mano</h2>
+        <p>At <strong>Regalos Segunda Mano</strong>, we are committed to protecting your privacy. Our app uses the Firebase authentication system to manage user accounts. This means that when you register, we securely store your email address and a unique user ID. Passwords are managed directly by Firebase and are stored in an encrypted format, without us having direct access to them.</p>
+
+        <h2>Account and Personal Data Deletion Request</h2>
+        <p>We understand that you have the right to control your data. If you wish to delete your <strong>Regalos Segunda Mano</strong> account and all associated data we store, you have two options:</p>
+        <ol>
+            <li>
+                <p><strong>Within the App:</strong> You can initiate the deletion process directly from the <strong>Regalos Segunda Mano</strong> app by navigating to <span class="highlight">Settings > Delete Account</span>. Follow the on-screen instructions.</p>
+            </li>
+            <li>
+                <p><strong>Via Email:</strong> If you prefer to request your account deletion via email, please send a message to our support address.</p>
+                <p class="contact-info">
+                    To delete your account and all associated data, please send an email to: <br>
+                    <a href="mailto:walla.alerts.app@gmail.com?subject=Regalos%20Segunda%20Mano%20Account%20Deletion%20Request">
+                        <span class="highlight">walla.alerts.app@gmail.com</span>
+                    </a><br>
+                    Please use the subject: <span class="highlight">"Regalos Segunda Mano Account Deletion Request"</span>
+                </p>
+                <p>In your email, please include the email address associated with your <strong>Regalos Segunda Mano</strong> account so we can process your request efficiently. We are committed to deleting all your stored data as soon as possible after verifying your identity.</p>
+            </li>
+        </ol>
+
+        <h2>Accessing Your Personal Data</h2>
+        <p>If you wish to inquire about what data we have stored about you or request a copy of it, please contact us via the same email: <a href="mailto:walla.alerts.app@gmail.com?subject=Regalos%20Segunda%20Mano%20Data%20Inquiry">walla.alerts.app@gmail.com</a>, stating "Regalos Segunda Mano Data Inquiry" in the subject line.</p>
+    </div>
+
+    <div id="italian" class="language-content">
+        <h2>Raccolta e Sicurezza dei Dati per Regalos Segunda Mano</h2>
+        <p>In <strong>Regalos Segunda Mano</strong>, ci impegniamo a proteggere la vostra privacy. La nostra app utilizza il sistema di autenticazione Firebase per gestire gli account utente. Ciò significa che quando vi registrate, memorizziamo in modo sicuro il vostro indirizzo email e un ID utente unico. Le password sono gestite direttamente da Firebase e sono memorizzate in formato crittografato, senza che abbiamo accesso diretto a esse.</p>
+
+        <h2>Richiesta di Eliminazione dell'Account e dei Dati Personali</h2>
+        <p>Comprendiamo che avete il diritto di controllare i vostri dati. Se desiderate eliminare il vostro account <strong>Regalos Segunda Mano</strong> e tutti i dati associati che memorizziamo, avete due opzioni:</p>
+        <ol>
+            <li>
+                <p><strong>Dall'App:</strong> Potete avviare il processo di eliminazione direttamente dall'app <strong>Regalos Segunda Mano</strong> navigando su <span class="highlight">Impostazioni > Elimina Account</span>. Seguite le istruzioni sullo schermo.</p>
+            </li>
+            <li>
+                <p><strong>Tramite Email:</strong> Se preferite richiedere l'eliminazione del vostro account tramite email, inviate un messaggio al nostro indirizzo di supporto.</p>
+                <p class="contact-info">
+                    Per eliminare il vostro account e tutti i dati associati, inviate un'email a: <br>
+                    <a href="mailto:walla.alerts.app@gmail.com?subject=Richiesta%20Eliminazione%20Account%20Regalos%20Segunda%20Mano">
+                        <span class="highlight">walla.alerts.app@gmail.com</span>
+                    </a><br>
+                    Si prega di utilizzare l'oggetto: <span class="highlight">"Richiesta Eliminazione Account Regalos Segunda Mano"</span>
+                </p>
+                <p>Nella vostra email, includete l'indirizzo email associato al vostro account <strong>Regalos Segunda Mano</strong> in modo che possiamo elaborare la vostra richiesta in modo efficiente. Ci impegniamo a eliminare tutti i vostri dati memorizzati il prima possibile dopo aver verificato la vostra identità.</p>
+            </li>
+        </ol>
+
+        <h2>Accesso ai Vostri Dati Personali</h2>
+        <p>Se desiderate richiedere quali dati abbiamo memorizzato su di voi o richiederne una copia, contattateci tramite la stessa email: <a href="mailto:walla.alerts.app@gmail.com?subject=Richiesta%20Dati%20Regalos%20Segunda%20Mano">walla.alerts.app@gmail.com</a>, indicando nell'oggetto "Richiesta Dati Regalos Segunda Mano".</p>
+    </div>
+
+    <div id="portuguese" class="language-content">
+        <h2>Coleta e Segurança de Dados para Regalos Segunda Mano</h2>
+        <p>Na <strong>Regalos Segunda Mano</strong>, estamos comprometidos em proteger sua privacidade. Nosso aplicativo usa o sistema de autenticação Firebase para gerenciar contas de usuário. Isso significa que, ao se registrar, armazenamos com segurança seu endereço de e-mail e um ID de usuário exclusivo. As senhas são gerenciadas diretamente pelo Firebase e são armazenadas em formato criptografado, sem que tenhamos acesso direto a elas.</p>
+
+        <h2>Solicitação de Exclusão de Conta e Dados Pessoais</h2>
+        <p>Entendemos que você tem o direito de controlar seus dados. Se desejar excluir sua conta do <strong>Regalos Segunda Mano</strong> e todos os dados associados que armazenamos, você tem duas opções:</p>
+        <ol>
+            <li>
+                <p><strong>Dentro do Aplicativo:</strong> Você pode iniciar o processo de exclusão diretamente do aplicativo <strong>Regalos Segunda Mano</strong> navegando para <span class="highlight">Configurações > Excluir Conta</span>. Siga as instruções na tela.</p>
+            </li>
+            <li>
+                <p><strong>Via E-mail:</strong> Se você preferir solicitar a exclusão da sua conta por e-mail, envie uma mensagem para o nosso endereço de suporte.</p>
+                <p class="contact-info">
+                    Para excluir sua conta e todos os dados associados, envie um e-mail para: <br>
+                    <a href="mailto:walla.alerts.app@gmail.com?subject=Solicita%C3%A7%C3%A3o%20de%20Exclus%C3%A3o%20de%20Conta%20Regalos%20Segunda%20Mano">
+                        <span class="highlight">walla.alerts.app@gmail.com</span>
+                    </a><br>
+                    Por favor, use o assunto: <span class="highlight">"Solicitação de Exclusão de Conta Regalos Segunda Mano"</span>
+                </p>
+                <p>No seu e-mail, inclua o endereço de e-mail associado à sua conta do <strong>Regalos Segunda Mano</strong> para que possamos processar sua solicitação de forma eficiente. Nos comprometemos a excluir todos os seus dados armazenados o mais rápido possível após verificar sua identidade.</p>
+            </li>
+        </ol>
+
+        <h2>Acessando Seus Dados Pessoais</h2>
+        <p>Se desejar consultar quais dados temos armazenados sobre você ou solicitar uma cópia deles, entre em contato conosco através do mesmo e-mail: <a href="mailto:walla.alerts.app@gmail.com?subject=Consulta%20de%20Dados%20Regalos%20Segunda%20Mano">walla.alerts.app@gmail.com</a>, indicando no assunto "Consulta de Dados Regalos Segunda Mano".</p>
+    </div>
+</body>
+</html>
