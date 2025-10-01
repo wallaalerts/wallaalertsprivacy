@@ -44,9 +44,9 @@
         <section class="description">
             <h2>Troba les millors ofertes de roba a l'instant!</h2>
             <p>Clothing Alerts és l'aplicació definitiva per als caçadors de gangues a Vinted.<br>Rep notificacions instantànies dels nous anuncis que s'ajustin a les teves cerques.<br>Ja no hauràs d'estar pendent tot el dia, l'aplicació ho fa automàticament per tu!</p>
-            <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank">
-                <img id="google-badge" alt="Obtén-lo a Google Play" src="https://play.google.com/intl/ca/badges/static/images/badges/ca_badge_web_generic.png" />
-            </a>
+            <div class="badge-container">
+                <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank"><img id="google-badge" alt="Obtén-lo a Google Play" src="https://play.google.com/intl/ca/badges/static/images/badges/ca_badge_web_generic.png" /></a><a href="https://apps.apple.com/app/clothing-alerts/id6752218795" target="_blank" rel="noopener"><img class="app-badge-apple" src="assets/img/app-store-badge.svg" alt="Download on the App Store" /></a>
+            </div>
         </section>
 
         <section class="features">
@@ -82,11 +82,17 @@
             </div>
         </section>
 
+        <section class="description">
+            <div class="badge-container">
+                <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank"><img id="google-badge" alt="Obtén-lo a Google Play" src="https://play.google.com/intl/ca/badges/static/images/badges/ca_badge_web_generic.png" /></a><a href="https://apps.apple.com/app/clothing-alerts/id6752218795" target="_blank" rel="noopener"><img class="app-badge-apple" src="assets/img/app-store-badge.svg" alt="Download on the App Store" /></a>
+            </div>
+        </section>
+
         <section class="other-apps">
             <h2>Altres aplicacions que et poden interessar</h2>
             <div class="other-apps-container">
                 <div class="app">
-                    <a href="regalos_segunda_mano_ca.html">
+                    <a href="https://wallaalerts.com/regalos_segunda_mano.html">
                         <img class="logo-other-app" src="images/logo_rsm.png" alt="Icona de Regals Segona Mà">
                         <h3>Regals Segona Mà</h3>
                         <p>Troba productes gratuïts a Wallapop a la teva àrea.</p>
@@ -94,7 +100,7 @@
                     <a href="https://play.google.com/store/apps/details?id=rstu.cosasgratis_alerts" target="_blank" class="cta-button">Descarregar</a>
                 </div>
                 <div class="app">
-                    <a href="walla_alerts_ca.html">
+                    <a href="https://wallaalerts.com/walla_alerts_ca.html">
                         <img class="logo-other-app" src="images/logo_wa.png" alt="Icona de Walla Alerts">
                         <h3>Walla Alerts</h3>
                         <p>Alertes instantànies d'anuncis de Wallapop.</p>
@@ -102,7 +108,7 @@
                     <a href="https://play.google.com/store/apps/details?id=rstu.wallaalerts" target="_blank" class="cta-button">Descarregar</a>
                 </div>
                 <div class="app">
-                    <a href="tc_alerts_ca.html">
+                    <a href="https://wallaalerts.com/tc_alerts.html">
                         <img class="logo-other-app" src="images/logo_tc.png" alt="Icona de tc alerts">
                         <h3>tc alerts</h3>
                         <p>Alertes per a todocoleccion: ideal per a col·leccionistes.</p>
@@ -110,7 +116,7 @@
                     <a href="https://play.google.com/store/apps/details?id=rstu.tc_alerts" target="_blank" class="cta-button">Descarregar</a>
                 </div>
                 <div class="app">
-                    <a href="cash_conv_alerts_ca.html">
+                    <a href="https://wallaalerts.com/cash_conv_alerts.html">
                         <img class="logo-other-app" src="images/logo_cc.png" alt="Icona de Cash Conv Alerts">
                         <h3>Cash Conv Alerts</h3>
                         <p>Notificacions de nous articles a Cash Converters.</p>
@@ -132,7 +138,10 @@
     <script>
         function changeLanguage() {
             var language = document.getElementById("language-select").value;
-            var newUrl = "https://wallaalerts.com/clothing_alerts_" + language + ".html";
+            
+            
+            var newUrl = "https://clothing-alerts.com/clothing_alerts_" + language + ".html";
+            if (language == "en") newUrl = "https://clothing-alerts.com";
             window.location.href = newUrl;
         }
     </script>

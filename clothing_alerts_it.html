@@ -44,9 +44,10 @@
         <section class="description">
             <h2>Trova Subito le Migliori Offerte di Abbigliamento!</h2>
             <p>Clothing Alerts è l'app perfetta per chi cerca offerte su Vinted.<br>Ricevi notifiche immediate sui nuovi annunci che corrispondono alle tue ricerche.<br>Non devi più stare allerta tutto il giorno, l'app lo fa automaticamente per te!</p>
-            <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank">
-                <img id="google-badge" alt="Ottieni su Google Play" src="https://play.google.com/intl/it/badges/static/images/badges/it_badge_web_generic.png" />
-            </a>
+            <div class="badge-container">
+                <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank"><img id="google-badge" alt="Get it on Google Play" src="https://play.google.com/intl/en/badges/static/images/badges/en_badge_web_generic.png" /></a>
+                <a href="https://apps.apple.com/app/clothing-alerts/id6752218795" target="_blank" rel="noopener"><img class="app-badge-apple" src="assets/img/app-store-badge.svg" alt="Download on the App Store" /></a>
+            </div>
         </section>
 
         <section class="features">
@@ -82,6 +83,13 @@
             </div>
         </section>
 
+        <section class="description">
+            <div class="badge-container">
+                <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank"><img id="google-badge" alt="Get it on Google Play" src="https://play.google.com/intl/en/badges/static/images/badges/en_badge_web_generic.png" /></a>
+                <a href="https://apps.apple.com/app/clothing-alerts/id6752218795" target="_blank" rel="noopener"><img class="app-badge-apple" src="assets/img/app-store-badge.svg" alt="Download on the App Store" /></a>
+            </div>
+        </section>
+
         <section class="other-apps">
             <h2>Altre App</h2>
             <a href="https://play.google.com/store/apps/details?id=rstu.walla_alerts" target="_blank">
@@ -102,7 +110,9 @@
     <script>
         function changeLanguage() {
             var language = document.getElementById("language-select").value;
-            var newUrl = "https://wallaalerts.com/clothing_alerts_" + language + ".html";
+            
+            var newUrl = "https://clothing-alerts.com/clothing_alerts_" + language + ".html";
+            if (language == "en") newUrl = "https://clothing-alerts.com";
             window.location.href = newUrl;
         }
     </script>

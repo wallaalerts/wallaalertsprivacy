@@ -44,9 +44,10 @@
         <section class="description">
             <h2>Găsește Imediat Cele Mai Bune Ofertă de Îmbrăcăminte!</h2>
             <p>Clothing Alerts este aplicația ideală pentru vânătorii de oferte pe Vinted.<br>Primește notificări imediate despre anunțurile noi care se potrivesc căutărilor tale.<br>Nu trebuie să stai tot timpul cu ochii pe aplicație, aceasta face totul automat pentru tine!</p>
-            <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank">
-                <img id="google-badge" alt="Descarcă de pe Google Play" src="https://play.google.com/intl/ro/badges/static/images/badges/ro_badge_web_generic.png" />
-            </a>
+            <div class="badge-container">
+                <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank"><img id="google-badge" alt="Get it on Google Play" src="https://play.google.com/intl/en/badges/static/images/badges/en_badge_web_generic.png" /></a>
+                <a href="https://apps.apple.com/app/clothing-alerts/id6752218795" target="_blank" rel="noopener"><img class="app-badge-apple" src="assets/img/app-store-badge.svg" alt="Download on the App Store" /></a>
+            </div>
         </section>
 
         <section class="features">
@@ -64,6 +65,13 @@
                 <img src="images/ic_money.svg" alt="Icon Ofertă">
                 <h3>Găsește Oferte</h3>
                 <p>Fii primul care descoperă cele mai bune oferte de haine second-hand.</p>
+            </div>
+        </section>
+
+        <section class="description">
+            <div class="badge-container">
+                <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank"><img id="google-badge" alt="Get it on Google Play" src="https://play.google.com/intl/en/badges/static/images/badges/en_badge_web_generic.png" /></a>
+                <a href="https://apps.apple.com/app/clothing-alerts/id6752218795" target="_blank" rel="noopener"><img class="app-badge-apple" src="assets/img/app-store-badge.svg" alt="Download on the App Store" /></a>
             </div>
         </section>
 
@@ -94,7 +102,9 @@
     <script>
         function changeLanguage() {
             var language = document.getElementById("language-select").value;
-            var newUrl = "https://wallaalerts.com/clothing_alerts_" + language + ".html";
+            
+            var newUrl = "https://clothing-alerts.com/clothing_alerts_" + language + ".html";
+            if (language == "en") newUrl = "https://clothing-alerts.com";
             window.location.href = newUrl;
         }
     </script>

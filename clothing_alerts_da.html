@@ -44,9 +44,10 @@
         <section class="description">
             <h2>Find de bedste tilbud på tøj øjeblikkeligt!</h2>
             <p>Clothing Alerts er den ultimative app for tilbudsjægere på Vinted.<br>Modtag øjeblikkelige beskeder om nye annoncer, der matcher dine søgninger.<br>Du behøver ikke længere være på vagt hele dagen, appen gør det automatisk for dig!</p>
-            <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank">
-                <img id="google-badge" alt="Få det på Google Play" src="https://play.google.com/intl/da/badges/static/images/badges/da_badge_web_generic.png" />
-            </a>
+            <div class="badge-container">
+                <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank"><img id="google-badge" alt="Get it on Google Play" src="https://play.google.com/intl/en/badges/static/images/badges/en_badge_web_generic.png" /></a>
+                <a href="https://apps.apple.com/app/clothing-alerts/id6752218795" target="_blank" rel="noopener"><img class="app-badge-apple" src="assets/img/app-store-badge.svg" alt="Download on the App Store" /></a>
+            </div>
         </section>
 
         <section class="features">
@@ -81,6 +82,13 @@
                 <img src="images/s_ca_4.jpg" alt="Skærmbillede 4">
             </div>
         </section>
+
+        <section class="description">
+            <div class="badge-container">
+                <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank"><img id="google-badge" alt="Get it on Google Play" src="https://play.google.com/intl/en/badges/static/images/badges/en_badge_web_generic.png" /></a>
+                <a href="https://apps.apple.com/app/clothing-alerts/id6752218795" target="_blank" rel="noopener"><img class="app-badge-apple" src="assets/img/app-store-badge.svg" alt="Download on the App Store" /></a>
+            </div>
+        </section>
     </main>
     
     <footer>
@@ -94,7 +102,9 @@
     <script>
         function changeLanguage() {
             var language = document.getElementById("language-select").value;
-            var newUrl = "https://wallaalerts.com/clothing_alerts_" + language + ".html";
+            
+            var newUrl = "https://clothing-alerts.com/clothing_alerts_" + language + ".html";
+            if (language == "en") newUrl = "https://clothing-alerts.com";
             window.location.href = newUrl;
         }
     </script>

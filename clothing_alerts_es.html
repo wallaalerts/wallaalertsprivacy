@@ -44,9 +44,10 @@
         <section class="description">
             <h2>¡Encuentra las mejores ofertas de ropa al instante!</h2>
             <p>Clothing Alerts es la aplicación definitiva para los cazadores de gangas en Vinted.<br>Recibe notificaciones instantáneas de los nuevos anuncios que se ajusten a tus búsquedas.<br>Ya no tendrás que estar pendiente todo el día, ¡la aplicación lo hace automáticamente por ti!</p>
-            <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank">
-                <img id="google-badge" alt="Consíguelo en Google Play" src="https://play.google.com/intl/es/badges/static/images/badges/es_badge_web_generic.png" />
-            </a>
+            <div class="badge-container">
+                <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank"><img id="google-badge" alt="Get it on Google Play" src="https://play.google.com/intl/en/badges/static/images/badges/en_badge_web_generic.png" /></a>
+                <a href="https://apps.apple.com/app/clothing-alerts/id6752218795" target="_blank" rel="noopener"><img class="app-badge-apple" src="assets/img/app-store-badge.svg" alt="Download on the App Store" /></a>
+            </div>
         </section>
 
         <section class="features">
@@ -83,11 +84,18 @@
             </div>
         </section>
 
+        <section class="description">
+            <div class="badge-container">
+                <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank"><img id="google-badge" alt="Get it on Google Play" src="https://play.google.com/intl/en/badges/static/images/badges/en_badge_web_generic.png" /></a>
+                <a href="https://apps.apple.com/app/clothing-alerts/id6752218795" target="_blank" rel="noopener"><img class="app-badge-apple" src="assets/img/app-store-badge.svg" alt="Download on the App Store" /></a>
+            </div>
+        </section>
+
         <section class="other-apps">
             <h2>Otras aplicaciones que te pueden interesar</h2>
             <div class="other-apps-container">
                 <div class="app">
-                    <a href="regalos_segunda_mano_es.html">
+                    <a href="https://wallaalerts.com/regalos_segunda_mano_es.html">
                         <img class="logo-other-app" src="images/logo_rsm.png" alt="Icono de Regalos Segunda Mano">
                         <h3>Regalos Segunda Mano</h3>
                         <p>Encuentra productos gratis en Wallapop en tu área.</p>
@@ -103,7 +111,7 @@
                     <a href="https://play.google.com/store/apps/details?id=rstu.wallaalerts" target="_blank" class="cta-button">Descargar</a>
                 </div>
                 <div class="app">
-                    <a href="tc_alerts_es.html">
+                    <a href="https://wallaalerts.com/tc_alerts_es.html">
                         <img class="logo-other-app" src="images/logo_tc.png" alt="Icono de tc alerts">
                         <h3>tc alerts</h3>
                         <p>Alertas para todocoleccion: ideal para coleccionistas.</p>
@@ -111,7 +119,7 @@
                     <a href="https://play.google.com/store/apps/details?id=rstu.tc_alerts" target="_blank" class="cta-button">Descargar</a>
                 </div>
                 <div class="app">
-                    <a href="cash_conv_alerts_es.html">
+                    <a href="https://wallaalerts.com/cash_conv_alerts_es.html">
                         <img class="logo-other-app" src="images/logo_cc.png" alt="Icono de Cash Conv Alerts">
                         <h3>Cash Conv Alerts</h3>
                         <p>Notificaciones de nuevos artículos en Cash Converters.</p>
@@ -133,7 +141,9 @@
     <script>
         function changeLanguage() {
             var language = document.getElementById("language-select").value;
-            var newUrl = "https://wallaalerts.com/clothing_alerts_" + language + ".html";
+            
+            var newUrl = "https://clothing-alerts.com/clothing_alerts_" + language + ".html";
+            if (language == "en") newUrl = "https://clothing-alerts.com";
             window.location.href = newUrl;
         }
     </script>
