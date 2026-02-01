@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Gear Notes</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon_mgn.ico">
+    <style>
+        @font-face {
+            font-family: 'Rubik';
+            src: url('fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+            font-weight: 100 900;
+            font-style: normal;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #373737;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #212121;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 20px 0;
+        }
+
+        .description {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .download-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .download-badges img {
+            height: 80px;
+            width: auto;
+        }
+
+        #google-badge {
+            height: 100px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .feature {
+            flex-basis: 30%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .feature img {
+            width: 64px;
+            height: 64px;
+        }
+
+        .screenshots {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+
+        .screenshot {
+            flex: 1 1 calc(50% - 20px);
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        .screenshot img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: #272727;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #313030;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #393939;
+        }
+
+        .cta-button2:hover {
+            background-color: #1f1f1f;
+        }
+
+        @media (max-width: 768px) {
+            .download-badges img {
+                height: 60px;
+            }
+
+            #google-badge {
+                height: 77px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <img src="images/logo_mgn.png" alt="Music Gear Notes Logo" class="logo">
+        <h1>Music Gear Notes</h1>
+        <p style="font-size: 20px;">Remember your gear settings</p>
+    </div>
+</header>
+
+<main class="container">
+    <section class="description">
+        <h2>Your visual notebook for music gear</h2>
+        <p>
+            Music Gear Notes helps musicians and producers remember presets, patches,
+            and hardware configurations using text notes and photos.<br>
+            Perfect for synthesizers, guitar pedals, loopers, amplifiers, and studio gear.
+        </p>
+
+        <div class="download-badges">
+            <a href="https://play.google.com/store/apps/details?id=rstu.musicgearnotes" target="_blank" rel="noopener">
+                <img id="google-badge" alt="Get it on Google Play"
+                     src="https://play.google.com/intl/en/badges/static/images/badges/en_badge_web_generic.png" />
+            </a>
+            <a href="https://apps.apple.com" target="_blank" rel="noopener">
+                <img alt="Download on the App Store"
+                     src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" />
+            </a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <img src="images/ic_notes.svg" alt="Notes Icon">
+            <h3>Notes & Photos</h3>
+            <p>Save text notes and multiple images for each preset or setup.</p>
+        </div>
+        <div class="feature">
+            <img src="images/ic_gear.svg" alt="Gear Icon">
+            <h3>Built for Musicians</h3>
+            <p>Organize devices, banks, and slots the way real gear works.</p>
+        </div>
+        <div class="feature">
+            <img src="images/ic_recall.svg" alt="Recall Icon">
+            <h3>Parameter Recall</h3>
+            <p>Recreate sounds quickly in the studio or on stage.</p>
+        </div>
+    </section>
+
+    <section class="screenshots">
+        <div class="screenshot">
+            <img src="images/s_mgn_1.png" alt="App screenshot 1">
+        </div>
+        <div class="screenshot">
+            <img src="images/s_mgn_2.png" alt="App screenshot 2">
+        </div>
+        <div class="screenshot">
+            <img src="images/s_mgn_3.png" alt="App screenshot 3">
+        </div>
+        <div class="screenshot">
+            <img src="images/s_mgn_4.png" alt="App screenshot 4">
+        </div>
+        <div class="screenshot">
+            <img src="images/s_mgn_5.png" alt="App screenshot 5">
+        </div>
+        <div class="screenshot">
+            <img src="images/s_mgn_6.png" alt="App screenshot 6">
+        </div>
+
+        <div style="width: 100%" class="description">
+            <div class="download-badges">
+                <a href="https://play.google.com/store/apps/details?id=rstu.musicgearnotes" target="_blank" rel="noopener">
+                    <img id="google-badge" alt="Get it on Google Play"
+                         src="https://play.google.com/intl/en/badges/static/images/badges/en_badge_web_generic.png" />
+                </a>
+                <a href="https://apps.apple.com" target="_blank" rel="noopener">
+                    <img alt="Download on the App Store"
+                         src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" />
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; RSTU</p>
+        <a href="privacy_policy.html"><p>Privacy Policy</p></a>
+        <a href="mailto:walla.alerts.app@gmail.com" class="cta-button cta-button2">Contact</a>
+    </div>
+</footer>
+
+</body>
+</html>
