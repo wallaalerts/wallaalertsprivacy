@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hantavirus Tracker - Real-time outbreak statistics, news, and global case mapping for awareness and health monitoring.">
+    <meta name="theme-color" content="#0A0A0A">
+    <title>Hantavirus Tracker</title>
+
+    <!-- ============================================================
+         TODO — Replace with your actual values before publishing
+         ============================================================
+         1. Replace './images/logo512.png' with your app logo
+         2. Replace './images/s1.png' with stats screenshot
+         3. Replace './images/s2.png' with news screenshot
+         4. Replace './images/s3.png' with map screenshot
+         5. Replace 'YOUR_APP_ID' with your Google Play Store app ID
+            e.g. ?id=com.example.hantavirus_tracker
+         ============================================================ -->
+
+    <style>
+    /* ============================================================
+       HANTVIRUS TRACKER — Landing Page Styles
+       Color palette (matches app theme):
+         - Primary:       #D32F2F (red)
+         - Secondary:     #FFB74D (amber)
+         - Background:    #0A0A0A (near black)
+         - Surface:       #121212 (dark gray)
+         - Surface High:  #1A1A1A
+         - Text:          #FFFFFF
+         - Text Muted:    #AAAAAA
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+        --red:#D32F2F; --red-dark:#8F1717; --amber:#FFB74D;
+        --black:#0A0A0A; --surface:#121212; --surface-hi:#1A1A1A;
+        --text:#FFFFFF; --text-muted:#AAAAAA;
+        --radius:12px; --radius-sm:8px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+        background-color:var(--black); color:var(--text);
+        font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+        line-height:1.65; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    a { color:var(--red); text-decoration:none; transition:opacity 0.2s; }
+    a:hover { opacity:0.8; }
+
+    .section { padding:80px 0; }
+    .section-inner { max-width:1100px; margin:0 auto; padding:0 24px; }
+    .section-title { font-size:clamp(1.6rem,4vw,2.2rem); font-weight:700; margin-bottom:10px; color:var(--text); }
+    .section-subtitle { color:var(--text-muted); font-size:1rem; margin-bottom:48px; max-width:560px; }
+
+    /* Navbar */
+    .navbar {
+        position:sticky; top:0; z-index:100;
+        background:rgba(10,10,10,0.92);
+        backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+        border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+    .nav-container {
+        max-width:1100px; margin:0 auto; padding:0 24px; height:60px;
+        display:flex; align-items:center; gap:12px;
+    }
+    .nav-logo { border-radius:16px; flex-shrink:0; }
+    .nav-brand { font-size:1rem; font-weight:600; flex:1; }
+    .nav-links { display:flex; gap:20px; margin-left:auto; }
+    .nav-link { color:var(--text-muted); font-size:0.875rem; transition:color 0.2s; }
+    .nav-link:hover { color:var(--text); opacity:1; }
+
+    /* Hero */
+    .hero { padding:80px 24px 100px; text-align:center; }
+    .hero-content { max-width:620px; margin:0 auto; animation:fadeUp 0.6s ease both; }
+    .hero-logo { border-radius:16px; margin:0 auto 24px; display:block; flex-shrink:0; }
+    .hero-title {
+        font-size:clamp(2rem,6vw,3rem); font-weight:800;
+        line-height:1.15; margin-bottom:14px; color:var(--text);
+    }
+    .hero-subtitle { font-size:1.1rem; color:var(--red); font-weight:600; margin-bottom:20px; }
+    .hero-description { color:var(--text-muted); font-size:1rem; max-width:500px; margin:0 auto 36px; line-height:1.7; }
+
+    /* Play Store Button */
+    .play-store-btn {
+        display:inline-flex; align-items:center; gap:10px;
+        background:var(--surface-hi); color:var(--text);
+        border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius);
+        padding:13px 26px; font-size:0.95rem; font-weight:600;
+        transition:background 0.2s,border-color 0.2s,transform 0.15s;
+    }
+    .play-store-btn:hover { background:var(--surface); border-color:rgba(211,47,47,0.4); transform:translateY(-1px); opacity:1; }
+    .play-icon { width:22px; height:22px; flex-shrink:0; object-fit:contain; }
+
+    /* Feature Cards */
+    .feature-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
+    .feature-card {
+        background:var(--surface); border:1px solid rgba(255,255,255,0.06);
+        border-radius:var(--radius); padding:28px;
+        display:flex; flex-direction:column; gap:10px;
+        transition:border-color 0.2s,transform 0.15s;
+    }
+    .feature-card:hover { border-color:rgba(211,47,47,0.25); transform:translateY(-2px); }
+    .feature-icon {
+        width:38px; height:38px; border-radius:50%;
+        background:rgba(211,47,47,0.12); color:var(--red);
+        font-size:1rem; display:flex; align-items:center; justify-content:center;
+    }
+    .feature-card h3 { font-size:1.05rem; font-weight:700; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+    .feature-card p { color:var(--text-muted); font-size:0.9rem; line-height:1.65; }
+    .badge {
+        background:rgba(255,183,77,0.15); color:var(--amber);
+        font-size:0.65rem; font-weight:700; letter-spacing:0.06em;
+        text-transform:uppercase; padding:2px 7px; border-radius:4px;
+        border:1px solid rgba(255,183,77,0.25);
+    }
+
+    /* Screenshots */
+    .screenshot-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px; }
+    .screenshot-item { display:flex; flex-direction:column; gap:14px; }
+    .screenshot-img {
+        width:100%; max-height:520px; object-fit:contain;
+        border-radius:var(--radius); border:1px solid rgba(255,255,255,0.08);
+        background:var(--surface); display:block;
+    }
+    .screenshot-caption h4 { font-size:0.95rem; font-weight:700; margin-bottom:4px; }
+    .screenshot-caption p { color:var(--text-muted); font-size:0.85rem; }
+
+    /* Transparency */
+    .transparency { background:var(--surface); }
+    .disclaimer-card {
+        background:var(--surface-hi); border:1px solid rgba(255,183,77,0.15);
+        border-radius:var(--radius); padding:32px; max-width:700px; margin-bottom:32px;
+    }
+    .disclaimer-icon { margin-bottom:16px; display:block; }
+    .disclaimer-card h3 { font-size:1.15rem; font-weight:700; margin-bottom:14px; }
+    .disclaimer-card p { color:var(--text-muted); font-size:0.9rem; line-height:1.75; margin-bottom:12px; }
+    .disclaimer-card p:last-child { margin-bottom:0; }
+    .info-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
+    .info-box { background:var(--black); border:1px solid rgba(255,255,255,0.06); border-radius:var(--radius); padding:24px; }
+    .info-box h4 { font-size:0.95rem; font-weight:700; margin-bottom:10px; }
+    .info-box p { color:var(--text-muted); font-size:0.875rem; line-height:1.7; }
+
+    /* Contact */
+    .contact-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
+    .contact-box { background:var(--surface); border:1px solid rgba(255,255,255,0.06); border-radius:var(--radius); padding:28px; }
+    .contact-box h3 {
+        font-size:0.75rem; font-weight:700; letter-spacing:0.08em;
+        text-transform:uppercase; color:var(--red); margin-bottom:14px;
+    }
+    .contact-name { font-size:1.2rem; font-weight:700; margin-bottom:8px; }
+    .contact-detail { color:var(--text-muted); font-size:0.875rem; margin-bottom:0; }
+    .contact-box p { color:var(--text-muted); font-size:0.875rem; margin-bottom:12px; }
+    .contact-email { color:var(--text); font-weight:600; font-size:0.9rem; word-break:break-all; }
+    .privacy-btn {
+        display:inline-flex; align-items:center; gap:8px;
+        background:rgba(211,47,47,0.1); color:var(--red);
+        border:1px solid rgba(211,47,47,0.25); border-radius:var(--radius-sm);
+        padding:10px 20px; font-size:0.875rem; font-weight:600;
+        transition:background 0.2s,border-color 0.2s;
+    }
+    .privacy-btn:hover { background:rgba(211,47,47,0.18); border-color:rgba(211,47,47,0.5); opacity:1; }
+
+    /* Footer */
+    .footer { border-top:1px solid rgba(255,255,255,0.06); padding:32px 0; }
+    .footer-inner { max-width:1100px; margin:0 auto; padding:0 24px; text-align:center; }
+    .footer-brand { font-size:0.875rem; font-weight:600; margin-bottom:6px; }
+    .footer-copy { color:var(--text-muted); font-size:0.8rem; }
+
+    /* Back to top */
+    .top-btn {
+        position:fixed; bottom:28px; right:28px; width:46px; height:46px;
+        border-radius:50%; border:none; background:#D32F2F; color:#fff;
+        font-size:1.3rem; cursor:pointer; display:none;
+        align-items:center; justify-content:center; z-index:200;
+        box-shadow:0 4px 12px rgba(0,0,0,0.4);
+        transition:opacity 0.2s,transform 0.15s;
+    }
+    .top-btn:hover { opacity:0.85; transform:translateY(-2px); }
+
+    @keyframes fadeUp { from{opacity:0;transform:translateY(20px);} to{opacity:1;transform:translateY(0);} }
+
+    @media (max-width:600px) {
+        .section { padding:60px 0; }
+        .hero { padding:60px 20px 80px; }
+        .hero-content { animation:none; }
+        .nav-links { gap:14px; }
+        .nav-link { font-size:0.8rem; }
+        .play-store-btn { padding:11px 20px; font-size:0.875rem; }
+    }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="./images/logo512.png" alt="Hantavirus Tracker Logo" class="nav-logo" width="40" height="40">
+            <span class="nav-brand">Hantavirus Tracker</span>
+            <div class="nav-links">
+                <a href="https://wallaalerts.com/privacy_hantavirustracker" class="nav-link" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                <a href="mailto:hantavirusapp@gmail.com" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <img src="./images/logo512.png" alt="Hantavirus Tracker" class="hero-logo" width="80" height="80">
+            <h1 class="hero-title">Hantavirus Tracker</h1>
+            <p class="hero-subtitle">Real-time outbreak awareness at your fingertips</p>
+            <p class="hero-description">
+                Stay informed with live statistics, aggregated news, and global case mapping
+                for hantavirus awareness and public health monitoring.
+            </p>
+            <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID"
+               class="play-store-btn"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Download on Google Play">
+                <img src="./images/google_play.svg" class="play-icon" alt="Google Play" aria-hidden="true">
+                <span>Download on Google Play</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="section features">
+            <div class="section-inner">
+                <h2 class="section-title">What Hantavirus Tracker Offers</h2>
+                <p class="section-subtitle">Three key tools to help you stay aware and informed.</p>
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <div class="feature-icon">&#9656;</div>
+                        <h3>Real-time Statistics</h3>
+                        <p>Displays confirmed cases, suspected cases, deaths, and other outbreak-related statistics sourced from publicly available data.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">&#9652;</div>
+                        <h3>News Feed</h3>
+                        <p>Aggregates the latest news articles via Google RSS feeds with the keyword "Hantavirus" to keep you updated on developments worldwide.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">&#9679;</div>
+                        <h3>Global Map <span class="badge">Beta</span></h3>
+                        <p>Interactive map showing locations where cases have been detected globally. This feature is currently in beta.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section screenshots">
+            <div class="section-inner">
+                <h2 class="section-title">App Overview</h2>
+                <p class="section-subtitle">A quick look at the three main sections.</p>
+                <div class="screenshot-grid">
+                    <div class="screenshot-item">
+                        <img src="./images/s1.png" alt="Statistics Screen" class="screenshot-img" loading="lazy">
+                        <div class="screenshot-caption"><h4>Statistics</h4><p>Live outbreak data and public health summary.</p></div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="./images/s2.png" alt="News Screen" class="screenshot-img" loading="lazy">
+                        <div class="screenshot-caption"><h4>News Feed</h4><p>Aggregated articles from Google RSS.</p></div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="./images/s3.png" alt="Map Screen" class="screenshot-img" loading="lazy">
+                        <div class="screenshot-caption"><h4>Global Map</h4><p>Detected case locations worldwide (Beta).</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section transparency">
+            <div class="section-inner">
+                <h2 class="section-title">Transparency &amp; Legal</h2>
+                <p class="section-subtitle">Transparency about data sources and limitations.</p>
+                <div class="disclaimer-card">
+                    <div class="disclaimer-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="14" cy="14" r="12" stroke="#FFB74D" stroke-width="2" fill="none"/>
+                            <path d="M14 8 L14 16" stroke="#FFB74D" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="14" cy="20" r="1.5" fill="#FFB74D"/>
+                        </svg>
+                    </div>
+                    <h3>Information Sources</h3>
+                    <p>News content is aggregated from publicly available RSS feeds and Google News indexing. The developer does not claim ownership of any third-party news content.</p>
+                    <p>The app only aggregates publicly available information for informational and awareness purposes. Information is refreshed each time the app is opened.</p>
+                    <p>The accuracy, completeness, or reliability of external news sources cannot be guaranteed by the developer. Users are advised to verify critical information through official health organizations and authoritative sources.</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-box">
+                        <h4>News Aggregation</h4>
+                        <p>News articles are collected via Google RSS feeds using the keyword "Hantavirus". The app does not create, edit, or verify the news content itself. All news is sourced from third-party publishers indexed by Google.</p>
+                    </div>
+                    <div class="info-box">
+                        <h4>Informational Purpose Only</h4>
+                        <p>Hantavirus Tracker is not a medical service and does not provide medical advice, diagnosis, or treatment. The app is intended solely for informational and awareness purposes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <div class="section-inner">
+                <h2 class="section-title">Developer &amp; Contact</h2>
+                <div class="contact-grid">
+                    <div class="contact-box">
+                        <h3>Developer</h3>
+                        <p class="contact-name">RSTU</p>
+                        <p class="contact-detail">Hantavirus Tracker is developed and maintained by RSTU.</p>
+                    </div>
+                    <div class="contact-box">
+                        <h3>Contact</h3>
+                        <p>For inquiries, feedback, or support:</p>
+                        <a href="mailto:hantavirusapp@gmail.com" class="contact-email">hantavirusapp@gmail.com</a>
+                    </div>
+                    <div class="contact-box">
+                        <h3>Privacy Policy</h3>
+                        <p>Your privacy is important to us. Please review our Privacy Policy.</p>
+                        <a href="https://wallaalerts.com/privacy_hantavirustracker"
+                           class="privacy-btn"
+                           target="_blank"
+                           rel="noopener noreferrer">View Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p class="footer-brand">Hantavirus Tracker &mdash; RSTU</p>
+            <p class="footer-copy">&copy; 2026 RSTU. All rights reserved. For informational purposes only.</p>
+        </div>
+    </footer>
+
+    <button class="top-btn" aria-label="Back to top">&#8679;</button>
+
+    <script>
+    (function(){
+        /* ---- Navbar background on scroll ---- */
+        var navbar=document.querySelector('.navbar');
+        if(navbar){
+            window.addEventListener('scroll',function(){
+                navbar.style.background=window.scrollY>20?'rgba(10,10,10,0.96)':'rgba(10,10,10,0.92)';
+            },{passive:true});
+        }
+
+        /* ---- Scroll-reveal ---- */
+        var els=document.querySelectorAll('.feature-card,.screenshot-item,.info-box,.contact-box');
+        if(els.length&&'IntersectionObserver' in window){
+            var obs=new IntersectionObserver(function(entries){
+                entries.forEach(function(e){
+                    if(e.isIntersecting){
+                        e.target.style.opacity='1';
+                        e.target.style.transform='translateY(0)';
+                        obs.unobserve(e.target);
+                    }
+                });
+            },{threshold:0.1});
+            els.forEach(function(el){
+                el.style.opacity='0';
+                el.style.transform='translateY(18px)';
+                el.style.transition='opacity 0.5s ease,transform 0.5s ease';
+                obs.observe(el);
+            });
+        }
+
+        /* ---- Back to top ---- */
+        var topBtn=document.querySelector('.top-btn');
+        if(topBtn){
+            window.addEventListener('scroll',function(){
+                topBtn.style.display=window.scrollY>400?'flex':'none';
+            },{passive:true});
+            topBtn.addEventListener('click',function(){
+                window.scrollTo({top:0,behavior:'smooth'});
+            });
+        }
+
+        /* ---- External links ---- */
+        document.querySelectorAll('a[href^="http"]').forEach(function(link){
+            if(!link.hasAttribute('target')){
+                link.setAttribute('target','_blank');
+                link.setAttribute('rel','noopener noreferrer');
+            }
+        });
+    })();
+    </script>
+</body>
+</html>
